@@ -3,7 +3,7 @@ from requests import get
 
 class Scrapper:
     
-    def get_data(url, tag, class_name, headers=None):
+    def start(url, tag, class_name, headers=None):
         data = list()
         web_page = get(url, timeout=5, headers=headers if headers is not None else None)
         soup = BeautifulSoup(web_page.content, 'html.parser')
